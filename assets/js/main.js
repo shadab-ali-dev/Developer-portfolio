@@ -21,6 +21,11 @@ document.querySelectorAll('.case').forEach(c => c.onclick = () => {
   document.getElementById('m-desc').textContent = c.dataset.detail || c.querySelector('p').textContent;
   const cv = document.getElementById('m-cv');
   cv.href = c.dataset.cv; cv.textContent = `Download ${c.dataset.cvname} CV`;
+    const repo = document.getElementById('m-repo');
+    if (repo) {
+      if (c.dataset.repo) { repo.href = c.dataset.repo; repo.style.display = 'inline-flex'; }
+      else { repo.style.display = 'none'; }
+    }
   modal.classList.add('open');
 });
 if (modal) modal.onclick = e => { if (e.target === modal || e.target.classList.contains('m-close')) modal.classList.remove('open'); };
