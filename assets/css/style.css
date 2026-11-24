@@ -161,3 +161,8 @@ nav .links a{padding:8px 4px;font-size:clamp(.8rem,1.6vw,.9rem);min-height:38px;
   .m-actions{flex-direction:column}
   .m-actions .cv-btn{width:100%}
 }
+
+/* Fix portrait & Core Technical Stack spacing */
+.portrait-wrap{margin-bottom:24px !important;position:relative;z-index:1}
+.portrait-wrap img{display:block;margin:0 auto;width:min(240px,64vw);height:auto}
+.skills-wrap{margin-top:0 !important;padding-top:8px !important;position:relative;z-index:2}
